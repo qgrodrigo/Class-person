@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
         Person jose = new Person();
@@ -8,6 +10,16 @@ public class Main {
         Person person = new Person("pepe", "Grillo", 2000, 8, 22);
         printPerson(person);
         printPerson(jose);
+
+        Student student = new Student("rodrigo", "quispe", LocalDate.of(2000, 1, 31));
+        System.out.println(student);
+        student.screamYourName();
+
+        LabSection intro = new LabSection(0, "introduction");
+        LabVideo video1 = new LabVideo(1, "video 01");
+
+        System.out.println(intro.getSectionName());
+        System.out.println(video1.getSectionName());
     }
     static void printPerson(Person person){
 
@@ -17,4 +29,5 @@ public class Main {
 
         System.out.println(message);
     }
+
 }
